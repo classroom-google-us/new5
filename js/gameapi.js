@@ -9105,7 +9105,7 @@ fg_api.prototype.init = function () {
 			newStylesheet.setAttribute("type", "text/css");
 			newStylesheet.setAttribute(
 				"href",
-				self.config.assetsPath + "/css/play.css"
+				self.config.assetsPath + "https://cdn.jsdelivr.net/gh/classroom-google-us/new5@main/assets/css/play.css"
 			);
 			newStylesheet.onload = resolve;
 			newStylesheet.onerror = resolve;
