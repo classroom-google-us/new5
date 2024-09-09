@@ -20,6 +20,20 @@
 </div>
 <div id="unity-warning"> </div>
 </div>
+<script>	
+		var ysdkInitialized = 0;
+
+		YaGames
+			.init()
+			.then(ysdk => 
+			{
+				console.log('Yandex SDK initialized');
+				window.ysdk = ysdk;				
+				ysdkInitialized = 1;
+				ysdk.adv.showFullscreenAdv({ callbacks: {} });
+
+			});			
+    </script>
 <script>
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
@@ -96,7 +110,6 @@
       }
 
       loadingBar.style.display = "block";
-
       canvas.style.background = "url('background.jpg') center / cover";
 
 	  var myGameInstance = null;
